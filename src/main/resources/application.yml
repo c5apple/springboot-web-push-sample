@@ -5,3 +5,8 @@ server:
     key-store-password: 123456
     keyStoreType: PKCS12
     keyAlias: tomcat
+
+firebase:
+  database:
+    url: https://sample-57edd.firebaseio.com/
+#    url: https://<DATABASE_NAME>.firebaseio.com/

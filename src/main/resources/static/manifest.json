@@ -3,12 +3,12 @@
 	"short_name": "ServiceWorker Push",
 	"icons": [
 		{
-			"src": "プッシュ通知で表示する画像のURL",
+			"src": "/firebase-logo.png",
 			"sizes": "192x192",
 			"type": "image/jpg"
 		}
 	],
 	"start_url": "./index.html",
 	"display": "standalone",
-	"gcm_sender_id": "FIXME Firebase で調べた送信者ID"
+	"gcm_sender_id": "103953800507"
 }

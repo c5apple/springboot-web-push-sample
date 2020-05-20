@@ -28,8 +28,12 @@ public class FirebaseClientService {
 				.setToken(token)
 				.setWebpushConfig(WebpushConfig.builder()
 						// ブラウザへのメッセージ
-						.setNotification(new WebpushNotification("タイトル", "本文\nです",
-								"https://placehold.jp/150x150.png"))
+						.setNotification(WebpushNotification.builder()
+								.setTitle("タイトル")
+								.setBody("本文\nです")
+								.setImage("https://placehold.jp/150x150.png")
+								.setIcon("https://placehold.jp/150x150.png")
+								.build())
 						.build())
 				.build();
 

@@ -7,6 +7,7 @@ import com.google.firebase.messaging.FirebaseMessagingException;
 import com.google.firebase.messaging.Message;
 import com.google.firebase.messaging.Notification;
 import com.google.firebase.messaging.WebpushConfig;
+import com.google.firebase.messaging.WebpushFcmOptions;
 import com.google.firebase.messaging.WebpushNotification;
 
 import lombok.extern.slf4j.Slf4j;
@@ -34,6 +35,7 @@ public class FirebaseClientService {
 								.setImage("https://placehold.jp/150x150.png")
 								.setIcon("https://placehold.jp/150x150.png")
 								.build())
+						.setFcmOptions(WebpushFcmOptions.withLink("https://localhost:8443/"))
 						.build())
 				.build();
 

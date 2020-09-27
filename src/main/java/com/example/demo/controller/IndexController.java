@@ -2,17 +2,15 @@ package com.example.demo.controller;
 
 import java.io.IOException;
 
-import javax.validation.constraints.NotNull;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.form.PushForm;
 import com.example.demo.service.FirebaseClientService;
 import com.google.firebase.messaging.FirebaseMessagingException;
 
@@ -31,8 +29,8 @@ public class IndexController {
 
 	@GetMapping("push")
 	@ResponseBody
-	public String push(@RequestParam @Validated @NotNull String token) throws FirebaseMessagingException, IOException {
-		firebaseClientService.push(token);
+	public String push(@Validated PushForm form) throws FirebaseMessagingException, IOException {
+		firebaseClientService.push(form.getToken());
 		return "Push成功";
 	}
 }

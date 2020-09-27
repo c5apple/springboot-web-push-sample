@@ -4,7 +4,7 @@
 	"icons": [
 		{
 			"src": "/firebase-logo.png",
-			"sizes": "192x192",
+			"sizes": "50x50",
 			"type": "image/jpg"
 		}
 	],
